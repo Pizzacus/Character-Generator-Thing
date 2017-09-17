@@ -395,7 +395,7 @@ function uploadCanvas() {
     })
 }
 
-document.getElementById("pic").addEventListener('input', handleImage, false);
+document.getElementById("pic").addEventListener('change', handleImage, false);
 document.getElementById("name").addEventListener('input', handleText, false);
 
 document.getElementById("age").addEventListener('input', handleText, false);
