@@ -1,0 +1,378 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: #eee;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+h1 {
+    color: #222;
+    font-size: 38px;
+    text-align: center;
+}
+
+.canvas-container {
+    position: relative;
+}
+
+canvas {
+    margin: auto;
+    display: block;
+}
+
+.canvas-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 100px;
+}
+
+.canvas-overlay input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+}
+
+.canvas-overlay input[type=text] {
+    border: none;
+    background: transparent;
+    color: transparent;
+    padding: 1px 0;
+    margin-top: -1em;
+    overflow: visible;
+}
+
+.canvas-overlay input[type=text]:hover {
+    background: rgba(64,64,64,0.15);
+}
+
+.canvas-overlay input[type=text]:focus {
+    background: #fff;
+    color: #444;
+}
+
+#pic{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#name {
+    position: absolute;
+    left: 120px;
+    top: 50px;
+    width: 260px;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#name:focus {
+    color: #222;
+}
+
+#age {
+    position: absolute;
+    left: 120px;
+    top: 85px;
+    width: 80px;
+    font-size: 14px;
+    text-align: right;
+}
+
+#sex {
+    position: absolute;
+    left: 210px;
+    top: 85px;
+    width: 80px;
+    font-size: 14px;
+    text-align: right;
+}
+
+#gender {
+    position: absolute;
+    left: 300px;
+    top: 85px;
+    width: 80px;
+    font-size: 14px;
+    text-align: right;
+}
+
+#class1 {
+    position: absolute;
+    top: 110px;
+    left: 120px;
+    width: 120px;
+    text-align: right;
+    font-size: 16px;
+}
+
+#class2 {
+    position: absolute;
+    top: 110px;
+    left: 260px;
+    width: 120px;
+    font-size: 16px;
+}
+
+#role {
+    position: absolute;
+    top: 130px;
+    left: 120px;
+    width: 260px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#circle1,
+#circle2,
+#circle3,
+#circle4,
+#circle5,
+#circle6 {
+    width: 100px;
+    position: absolute;
+    font-size: 14px;
+}
+
+#circle1,
+#circle2,
+#circle3 {
+    left: 135px;
+}
+
+#circle4,
+#circle5,
+#circle6 {
+    left: 260px;
+}
+
+#circle1,
+#circle4 {
+    top: 150px;
+}
+
+#circle2,
+#circle5 {
+    top: 170px;
+}
+
+#circle3,
+#circle6 {
+    top: 190px;
+}
+
+#player {
+    position: absolute;
+    top: 190px;
+    left: 15px;
+    width: 100px;
+    text-align: right;
+    font-size: 14px;
+}
+
+#cross1,
+#cross2,
+#cross3,
+#cross4,
+#cross5,
+#cross6 {
+    position: absolute;
+    width: 100px;
+    font-size: 14px;
+}
+
+#cross1,
+#cross2 {
+    left: 35px;
+}
+
+#cross3,
+#cross4 {
+    left: 155px;
+}
+
+#cross5,
+#cross6 {
+    left: 275px;
+}
+
+#cross1,
+#cross3,
+#cross5 {
+    top: 215px;
+}
+
+#cross2,
+#cross4,
+#cross6 {
+    top: 235px;
+}
+
+.upload {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    width: 100px;
+    height: 140px;
+    opacity: 0;
+    background: rgba(0,0,0,0.25);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    transition: ease-in 0.1s all;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.upload:hover {
+    opacity: 1;
+}
+
+.button-container {
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    font: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    border: none;
+    border-radius: 2px;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    margin: 0 8px;
+    min-width: 120px;
+    cursor: pointer;
+    transition: all 0.05s ease-in;
+    background: #fff;
+    text-decoration: none;
+    color: #333;
+}
+
+.button:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    background: #eee;
+}
+
+.button:active {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    background: #ddd;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button::-moz-focus-inner {
+    border: 0;
+ }
+
+.button.primary {
+    background: #0288D1;
+    color: #fff;
+}
+
+.button.primary:hover {
+    background: #0277BD;
+}
+
+.button.primary:active {
+    background: #01579B;
+}
+
+.button.loading {
+    transition: none;
+    font-size: 0;
+}
+
+@keyframes uploading {
+    25% {
+        content: "Uploading.";
+    }
+
+    50% {
+        content: "Uploading..";
+    }
+
+    75% {
+        content: "Uploading..."
+    }
+}
+
+button.loading::after{
+    content: "Uploading";
+    font-size: 14px;
+    display: inline-block;
+    animation-name: uploading;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+a {
+    color: #333;
+}
+
+
+.hidden {
+    visibility: hidden;
+}
+
+.separator {
+    width: 200px;
+    height: 1px;
+    background: #aaa;
+    margin: 20px auto;
+}
+
+#link {
+    font: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #999;
+    padding: 5px;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    width: 350px;
+    font-size: 20px;
+}
+
+.smol {
+    display: block;
+    font-size: 12px;
+    line-height: 1.25em;
+    color: #444;
+}
+
+.smol p {
+    margin: 0.5em 0;
+}
+
+.link-container {
+    text-align: center;
+}

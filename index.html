@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Roboto just asked me to make this website, so I made it, I have no idea why he wants that and what the purpose is,
+        I'm just making it for no reason</title>
+    
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Character Card<br>Generator Thingy</h1>
+
+    <div class="canvas-container">
+        <canvas width="400" height="270" id="card"></canvas>
+
+        <div class="canvas-overlay">
+            <div class="upload">
+                Select an image
+                <input type="file" id="pic">
+            </div>
+
+            <input id="name" type="text">
+            <input id="age" type="text">
+            <input id="sex" type="text">
+            <input id="gender" type="text">
+
+            <input id="class1" type="text">
+            <input id="class2" type="text">
+
+            <input id="role" type="text">
+
+            <input id="circle1" type="text">
+            <input id="circle2" type="text">
+            <input id="circle3" type="text">
+            <input id="circle4" type="text">
+            <input id="circle5" type="text">
+            <input id="circle6" type="text">
+
+            <input id="player" type="text">
+
+            <input id="cross1" type="text">
+            <input id="cross2" type="text">
+            <input id="cross3" type="text">
+            <input id="cross4" type="text">
+            <input id="cross5" type="text">
+            <input id="cross6" type="text">
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button id="upload" class="button primary">Get link to image</button>
+        <a href="#" id="download" class="button" download="card.png">Save image to disk</a>
+    </div>
+
+    <div id="link-container" class="link-container hidden">
+        <div class="separator"></div>
+        This is a link to your card.<br>
+        You can copy-paste it on Discord and it'll show up like a normal image.
+        <input id="link" type="text" readonly>
+        <span class="smol">
+            <p>I don't own Mixtape.moe, but they made their API public, so they're probably fine with people using it like that.</p>
+            <p>Being able to copy the image to the clipboard would have been convienent, but it is impossible...</p>
+            <p>Website can copy text to clipboard, not images.</p>
+            <!--<p>You might say that an image inside a div with a contentEditable attribute can be copied, and this is true, but it can't be pasted into Discord.</p>
+            <p>That is because contentEditable object use RTF to copy and paste data if I remember correctly, while Discord and other softwares just use plain images.</p>-->
+        </span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
